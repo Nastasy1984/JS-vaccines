@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>Calendar Of Immunisation </title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+        <div class="layout">
+            <div class="content">
+                <div class="docName">
+                    <h1> Расчет календаря прививок по дате рождения </h1>
+                </div>  
+                <div class="form">
+                    <p>
+                                <label for="text">Имя ребенка: </label>
+                                <input id="nameOfCh" type="text" name="nameOfCh"/>
+                    </p>
+                    <p>
+                        <label for="date">Дата рождения: </label>
+                        <input id="date" type="date" name="date"/>
+                    </p>
+                    <p>
+                        <button id="calc" type="submit">Расcчитать</button>
+                    </p>
+                    <hr>
+                </div> 
+                <div id="result">
+                </div> 
+            </div>   
+            <script type="text/javascript" src="listProbe.js"></script>
+            <script type="text/javascript" src="index.js"></script>
+            <div class="footer">
+                <hr>
+                <div>
+                    Разработано Спиридоновой Анастасией в качестве выпускного проекта к курсу JavaScript в НИИТ 2019.
+                </div> 
+                <div>
+                    Данные расчета носят справочный характер. Рекомендуется проконсультироваться с врачом-педиатром.
+                </div> 
+            </div> 
+        </div>
+	</body>
+</html>

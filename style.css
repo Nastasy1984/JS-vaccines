@@ -1,0 +1,87 @@
+    
+body{
+    background-color: #FFE4E1;
+}
+div{
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+}
+div.layout{
+	background-image: url(3.png);
+	background-repeat: repeat;
+    width: 80%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+}
+div.content{
+    font-family: Helvetica, Verdana;
+    color: #2F4F4F;
+    padding: 30pt;
+}
+div.docName{
+    text-align: center;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px;
+}
+h1{
+    font-size: 20pt;
+    color: #2F4F4F;
+    font-weight: 500;
+}
+div.footer{
+    padding: 30pt;
+    margin-top: 70pt;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 10pt;
+    color: #778899;
+}
+button{
+    text-align: center;
+    padding: 4px;
+    font-size: 13pt;
+    border-radius: 5px;
+    border-color: #B0C4DE;
+    background: none;
+    text-decoration: none;
+    width: 150px;
+    font-weight: 500;
+    color: #DC143C;
+    margin-top:10px;
+}
+button:hover {
+    background-color: #DC143C;
+    color: white;
+    cursor: pointer;
+}
+input{
+    font-family: Helvetica, Verdana;
+    color: #2F4F4F;
+    padding: 4pt;
+    font-size: 12pt;
+    border-radius: 5px;
+    width: 200px;
+    height: 20px;
+    margin-right: 100%;
+}
+table{
+    width: 90%;
+    border: 1px;
+    border-style: solid;
+    padding: 5px;
+    border-collapse: collapse;
+    background-color: white;
+}
+th, td {
+    border: 1px solid grey;
+}
+label{
+    font-size: 12pt;
+    color: #2F4F4F;
+}
