@@ -1,4 +1,3 @@
-
 const birth = document.getElementById("date");
 birth.value = "2019-01-01";
 const calc = document.getElementById("calc");
@@ -6,6 +5,20 @@ const res = document.getElementById("result");
 const nameOfCh = document.getElementById("nameOfCh");
 
 calc.onclick = onClickCalc;
+let vacsData;
+
+//parsing JSON data
+
+//taking data from JSON file that was packaged as JS
+vacsData = vacsDataList;
+
+//transforming field "addAmount" to numeric type
+vacsData = JSON.parse(vacsData, function(key, value){
+    if (key == 'addAmount') {
+        return +value;
+    }
+    return value;
+});
 
 //adding certain amount of days to any date
 function countResult(dateForCount, days){
@@ -27,7 +40,6 @@ let options = {
     day: 'numeric',
     weekday: 'short',
   };
-
 
 function onClickCalc(){
     result.innerHTML = "";
@@ -61,23 +73,23 @@ function onClickCalc(){
 
     //creating rows with vaccines
     let DateOfVac = new Date(birth.value);
-    let countOfRows = myData.vacs.length;
+    let countOfRows = vacsData.vacs.length;
     for (i = 0; i < countOfRows; i++){
         DateOfVac = new Date(birth.value);
         let row = document.createElement('tr');
         table.appendChild(row);
         let td = document.createElement('td');
-        td.innerText = myData.vacs[i].vac;
+        td.innerText = vacsData.vacs[i].vac;
         row.appendChild(td);
         td = document.createElement('td');
-        td.innerText = myData.vacs[i].numOfVac;
+        td.innerText = vacsData.vacs[i].numOfVac;
         row.appendChild(td);
         td = document.createElement('td');
-        let amount = +myData.vacs[i].addAmount;
-        if ((+(myData.vacs[i].addWhat)) === 1){
+        let amount = vacsData.vacs[i].addAmount;
+        if ((+(vacsData.vacs[i].addWhat)) === 1){
             DateOfVac = countResult(new Date(birth.value), amount);
         }
-        else if ((+(myData.vacs[i].addWhat)) === 2){
+        else if ((+(vacsData.vacs[i].addWhat)) === 2){
             DateOfVac = countResultByMonth(new Date(birth.value), amount);
         }
         else{
